@@ -32,10 +32,27 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Syntastic'
 "need the bundle https://github.com/vim-scripts/UltiSnips
 
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+" let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 " To install the Bundle :BundleInstall in vim
 " To install the Plugin :PluginInstall in vim
 call vundle#end()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle Plugin end
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vim_airline config
 set laststatus=2 " force the status bar when there is only one buffer
@@ -59,8 +76,6 @@ if version >=703
     set colorcolumn =+1
 endif
 
-" interface
-colorscheme obsidian
 
 " coding style
 

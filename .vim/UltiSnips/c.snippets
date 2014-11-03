@@ -1,0 +1,21 @@
+snippet inc "include lib" b
+#include <$1.h>
+endsnippet 
+
+snippet Inc "include my_lib" b
+#include "$1.h"
+endsnippet
+
+snippet for "loop for" b
+for (${1:int} i = $2; i < $3; ++i)
+{
+    ${4:/*FIXME*/}
+}
+endsnippet
+
+snippet while "loop while" b
+while (${1:condition})
+{
+    ${2:/*FIXME*/}
+}
+endsnippet
