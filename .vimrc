@@ -32,6 +32,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Syntastic'
 "need the bundle https://github.com/vim-scripts/UltiSnips
 
+
 " Track the engine.
 Plugin 'SirVer/ultisnips'
 
@@ -50,6 +51,7 @@ let g:UltiSnipsEditSplit="vertical"
 " To install the Bundle :BundleInstall in vim
 " To install the Plugin :PluginInstall in vim
 call vundle#end()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle Plugin end
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -69,6 +71,7 @@ set showcmd
 
 set scrolloff=5
 set cursorline
+set cursorcolumn
 set textwidth=79
 set colorcolumn=80
 
@@ -76,17 +79,19 @@ if version >=703
     set colorcolumn =+1
 endif
 
+" interface
+colorscheme jellybeans
 
 " coding style
-
 set expandtab "remplace les tabulations par des espaces
 set tabstop=8 "taille d'une tabulation (8 par default)
 set softtabstop=4 "nombre d'espace lors d'un appuie tab
 set shiftwidth=4 "niveau d'intentation
-"autocmd BufWritePre * :%s/\s\+$//
+" autocmd BufWritePre * :%s/\s\+$//
 match Todo /\s\+$/
 
-
+" enable doxygen syntax
+let g:load_doxygen_syntax=1
 
 au VimEnter * RainbowParenthesesToggleAll
 au Syntax * RainbowParenthesesLoadRound
