@@ -32,6 +32,8 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Syntastic'
 "need the bundle https://github.com/vim-scripts/UltiSnips
 
+" colorscheme
+Plugin 'jellybeans.vim'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -47,6 +49,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
 
 " To install the Bundle :BundleInstall in vim
 " To install the Plugin :PluginInstall in vim
