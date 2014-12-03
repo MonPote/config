@@ -25,12 +25,23 @@ Plugin 'gmarik/Vundle.vim'
 " Add a status cool status bar
 Plugin 'bling/vim-airline'
 
+" Git + vim = Win
+Plugin 'fugitive.vim'
+
+" Enhance the highligth of vim
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
 " Color the parentheses
 Bundle 'kien/rainbow_parentheses.vim'
 
 " Correct your syntax when you are saving
 Bundle 'Syntastic'
-"need the bundle https://github.com/vim-scripts/UltiSnips
+
+" Help you to comment quickly
+Plugin 'The-NERD-Commenter'
+
+" Improve the explorer of vim
+Plugin 'The-NERD-tree'
 
 " colorscheme
 Plugin 'jellybeans.vim'
@@ -82,6 +93,8 @@ if version >=703
     set colorcolumn =+1
 endif
 
+set list listchars=tab:»·,trail:·
+
 " interface
 colorscheme jellybeans
 
@@ -100,3 +113,8 @@ au VimEnter * RainbowParenthesesToggleAll
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+
+let g:syntastic_cpp_compiler='clang++'
+let g:syntastic_c_compiler='clang'
+let g:syntastic_cpp_compiler_options = "-std=c++11"
